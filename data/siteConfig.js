@@ -1,82 +1,99 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
-  keyWords: ['gatsbyjs', 'react', 'curriculum'],
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
+  siteTitle: 'Hi! I\'m Jaycee!',
+  siteDescription: ``,
+  keyWords: ['jayceebaste', 'jcbaste', 'jaycee'],
+  authorName: 'Jaycee Baste',
+  twitterUsername: 'jayceebaste',
+  githubUsername: 'jacobcharlesbaste',
   authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  authorDescription: `Developer, Father, Husband, Farmer. As a software developer I am most interested in learning new technologies particularly the blockchain and ecommerce. <br />
+    Spent most of my career working on applications primarily developed in .NET Technologies in both C# and VB with Angular in the frontend.<br />
+    I recently worked as Senior Systeam Analyst for a capital market corporation of the Singapore government, working on various applications mainly developed in <strong>.NET Core & Angular</strong>`,
   skills: [
     {
-      name: 'HTML',
+      name: '.NET',
+      level: 80
+    },
+    {
+      name: 'Angular',
       level: 70
+    },
+    {
+      name: 'Javascript',
+      level: 70
+    },
+    {
+      name: 'C#',
+      level: 80
+    },
+    {
+      name: 'VB',
+      level: 80
+    },
+    {
+      name: 'Git',
+      level: 60
+    },
+    {
+      name: 'HTML',
+      level: 80
     },
     {
       name: 'CSS',
       level: 60
-    },
-    {
-      name: 'Javascript',
-      level: 50
-    },
-    {
-      name: 'NodeJs',
-      level: 40
-    },
-    {
-      name: 'React',
-      level: 60
-    },
-    {
-      name: 'Git',
-      level: 70
     },
     /* more skills here */
   ],
   jobs: [
     /* more jobs here */
     {
-      company: "Gympass",
+      company: "Apar Technologies Pte. Ltd. [Singapore]",
       begin: {
-        month: 'sep',
-        year: '2019'
-      },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I am part of the Corporate team, responsible for the development and maintenance of the employee management platform, giving more and more autonomy to partner companies."
-  
-    },  {
-      company: "Lendico",
-      begin: {
-        month: 'apr',
+        month: 'Aug',
         year: '2018'
       },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
+      duration: '3 years',
+      occupation: "Senior System Analyst",
+      description: "As part of the Application Management Support team for a Singapore government corporation. Working on various applications for Financial and Investment Services developed in ASP.NET Core C# and Angular with MS SQL Server and Oracle as Database. Using Git for code version control, Jenkins and Electric Flow for CICD, Control-M and Hangfire for batch job management and automation."
   
-    }, {
-      company: "Anapro",
+    },  {
+      company: "I-Access Solutions Pte. Ltd. [Singapore]",
       begin: {
-        month: 'dec',
+        month: 'Dec',
         year: '2016'
       },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
+      duration: '2 years',
+      occupation: "Software Engineer",
+      description: "Part of the product development team working on enhancements and updates of eTeamsV5 System a training and financial management software as service developed in ASP.NET, AngularJS, DevExpress, MVC, MVP, WCF, Web API and  Entity Framework with SQL Server Database and SSRS for reports."
+  
     }, {
-      company: "Anapro",
+      company: "Mpyre Software Inc. [Canada]",
       begin: {
-        month: 'set',
-        year: '2012'
+        month: 'Nov',
+        year: '2009'
       },
-      duration: '4 yrs e 3 mos',
-      occupation: "Support Technician",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
+      duration: '7 years - Offshore Team Member[Philippines]',
+      occupation: "Senior Programmer",
+      description: "Worked on the updating and migration of one of the Top SEO automation software SENukeXCr, a desktop application developed in VB6 to VB.NET and C# with server communication scripts in PHP."
+    }, {
+      company: "Gulf Agency Company [Saudi Arabia]",
+      begin: {
+        month: 'Feb',
+        year: '2007'
+      },
+      duration: '3 yrs - Offshore Team Member[Philippines]',
+      occupation: "Senior .NET Developer",
+      description: "Worked on the development and upgrading of enterprise logistics and accounting system project for shipping and marine services division of GAC Saudi Arabia using ASP.NET C# and MS SQL Server as Database."
+  
+    },{
+      company: "University of Mindanao [Philippines]",
+      begin: {
+        month: 'July',
+        year: '2002'
+      },
+      duration: '4 yrs 10 months',
+      occupation: "College Instructor",
+      description: "Teaching major Computer Science and Information Technology subjects like Compiler Design, Database Management Systems, Operating Systems, Programming Languages and others."
   
     },
   ],
@@ -94,12 +111,12 @@ module.exports = {
     /* more portifolio items here */
   ],
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    twitter: "https://twitter.com/jcbaste",
+    linkedin: "https://www.linkedin.com/in/jayceebaste/",
+    github: "https://github.com/jacobcharlesbaste",
+    email: "jayceebaste@yahoo.com"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
+  siteUrl: 'https://www.jbaste.com',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpeg',
   googleAnalyticsId: 'UA-000000000-1',
