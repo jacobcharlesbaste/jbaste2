@@ -128,12 +128,8 @@ module.exports = {
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
     {
-      label: 'Home',
+      label: '',
       url: '/',
-    },
-    {
-      label: 'Portifolio',
-      url: '/portifolio',
     }
   ]
 }
