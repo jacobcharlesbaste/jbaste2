@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slickgrid@3.0.2/slick.grid.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slickgrid@3.0.2/slick.core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slickgrid@3.0.2/slick.grid.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slickgrid@3.0.2/slick.dataview.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slickgrid@3.0.2/slick.interactions.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="grid"></div>
+  <script>
+    // Load the data from the CSV file
+    // Papa.parse('https://data.cityofnewyork.us/api/views/25th-nujf/rows.csv?accessType=DOWNLOAD', {
+    Papa.parse('data.csv', {
+      download: true,
+      header: true,
+      complete: function(results) {
+        var data = results.data;
+
+        // Generate the grid columns from the first row of the CSV file
+        var columns = [];
+        for (var field in data[0]) {
+          columns.push({id: field, name: field, field: field, sortable: true});
+        }
+
+        // Initialize the grid
+        var grid = new Slick.Grid('#grid', data, columns, {
+          enableAsyncPostRender: true,
+          asyncPostRenderDelay: 30,
+          frozenColumn: 0
+        });
+
+        // Set up sorting
+        var dataView = new Slick.Data.DataView();
+        dataView.setItems(data);
+        grid.setSortColumn("name", true);
+        grid.onSort.subscribe(function(e, args) {
+          var cols = args.sortCols;
+
+          dataView.sort(function(dataRow1, dataRow2) {
+            for (var i = 0, l = cols.length; i < l; i++) {
+              var field = cols[i].sortCol.field;
+              var sign = cols[i].sortAsc ? 1 : -1;
+              var value1 = dataRow1[field], value2 = dataRow2[field];
+              var result = (value1 == value2 ? 0 : (value1 > value2 ? 1 : -1)) * sign;
+              if (result != 0) {
+                return result;
+              }
+            }
+            return 0;
+          });
+          grid.invalidate();
+          grid.render();
+        });
+        grid.init();
+      }
+    });
+  </script>
+</body>
+</html>
